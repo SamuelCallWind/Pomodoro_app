@@ -1,0 +1,33 @@
+.box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 40vh;
+    width: 80vh;
+    background-color: rgba(4, 27, 95, 0.803);
+    border: solid black 2px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttonOne, .buttonTwo {
+    flex: 1;
+    height: 10vh;
+    background-color: rgba(240, 248, 255, 0.557);
+    border: solid 2px black;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.buttonTwo {
+    margin-right: 5px;
+    position: relative;
+}
+
+.buttonOne {
+    margin-left: 5px;
+}
