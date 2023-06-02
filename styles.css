@@ -4,30 +4,49 @@
     left: 50%;
     transform: translate(-50%, -50%);
     height: 40vh;
-    width: 80vh;
+    width: 1fr;
     background-color: rgba(4, 27, 95, 0.803);
     border: solid black 2px;
     border-radius: 10px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    flex-direction: column;
     justify-content: center;
+    justify-items: center;
+    align-items: start;
 }
 
 .buttonOne, .buttonTwo {
-    flex: 1;
     height: 10vh;
+    width: 30vh;
     background-color: rgba(240, 248, 255, 0.557);
     border: solid 2px black;
     border-radius: 5px;
     padding: 5px;
+    box-shadow: 2px 2px 5px 1px;
 }
 
 .buttonTwo {
-    margin-right: 5px;
-    position: relative;
+    margin-right: 5vh;
 }
 
 .buttonOne {
-    margin-left: 5px;
+    margin-left: 5vh;
+    margin-right: 5vh;
+}
+
+.timer {
+    margin-top: 5vh;
+    height: 10vh;
+    width: 60vh;
+    background-color: white;
+    border: solid black 2px;
+    margin-bottom: 5vh;
+    align-self: center;
+}
+
+.box > * {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
