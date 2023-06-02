@@ -24,8 +24,18 @@
     border-radius: 5px;
     padding: 5px;
     box-shadow: 2px 2px 5px 1px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
+.smallerText {
+    font-size: 1vw;
+}
 .buttonTwo {
     margin-right: 5vh;
 }
@@ -43,6 +53,11 @@
     border: solid black 2px;
     margin-bottom: 5vh;
     align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8vw;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .box > * {
