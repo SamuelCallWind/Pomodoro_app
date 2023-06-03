@@ -1,3 +1,7 @@
+body {
+    display: flex;
+}
+
 .box {
     position: absolute;
     top: 50%;
@@ -94,4 +98,34 @@
 
 .reset:hover {
     background-color: rgba(0, 127, 207, 0.63);
+}
+
+.buttonPlus, .buttonMinus {
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    border: solid rgba(15, 14, 14, 0.665) 2px;
+    border-radius: 2px;
+    height: 8vh;
+    width: 8vw;
+    transition: background-color 0.1s ease-in-out;
+}
+
+.buttonPlus {
+    top: 30vh;
+    left: 7vw;
+}
+.buttonPlus:hover {
+    background-color: rgba(35, 35, 35, 0.826);
+}
+
+.buttonMinus {
+    top: 60vh;
+    left: 7vw;
+}
+.buttonMinus:hover {
+    background-color: rgba(35, 35, 35, 0.826);
 }
