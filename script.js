@@ -35,6 +35,8 @@ function countdown(){
 
 addMinute.addEventListener('click', () => timeChange(1));
 deduceMinute.addEventListener('click', () => timeChange(-1));
-resetButton.addEventListener('click', () => timerScreen.innerHTML = "25:00");
+resetButton.addEventListener('click', () => {
+    clearInterval(countInterval);
+    timerScreen.innerHTML = "25:00"});
 startButton.addEventListener('click', () => countdown());
 pauseButton.addEventListener('click', () => clearInterval(countInterval));
