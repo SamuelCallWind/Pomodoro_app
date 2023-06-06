@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="styles.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pomodoro page</title>
 </head>
 <body>
     <div class="buttonPlus">+</div>
@@ -19,26 +19,7 @@
         <div class="reset">Reset the timer</div>
     </div>
 
-    <script>
-        let timerElement = document.querySelector('.timer');
-        let addButton = document.querySelector('.buttonPlus');
-        let subtractButton = document.querySelector('.buttonMinus');
-        let resetButton = document.querySelector('.reset');
+    <script src="./script.js"></script>
     
-        function updateTimer(minutesToAdd) {
-            let timeParts = timerElement.innerHTML.split(':').map(part => Number(part));
-            timeParts[0] += minutesToAdd;
-            if (timeParts[0] >= 60) {
-                timeParts[0] = 60;
-            } else if (timeParts[0] < 0) {
-                timeParts[0] = 0;
-            }
-            timerElement.innerHTML = timeParts.map(part => part.toString().padStart(2, '0')).join(':');
-        }
-    
-        addButton.addEventListener('click', () => updateTimer(1));
-        subtractButton.addEventListener('click', () => updateTimer(-1));
-        resetButton.addEventListener('click', () => timerElement.innerHTML = "25:00");
-    </script>
 </body>
 </html>
