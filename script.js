@@ -17,24 +17,24 @@ function timeChange(numberOfMinutes) {
     timerScreen.innerHTML = timerContent.map(part => part.toString().padStart(2, '0')).join(':');
     }
 
-    function countdown(){
-        let timerContent = timerScreen.innerHTML.split(':').map(content => Number(content));
-        let timerSeconds = timerContent[0] * 60 + timerContent[1];
-        countInterval = setInterval(() => {
-            if (timerContent[0] === 0 && timerContent[1] === 0) {
-                clearInterval(countdownInterval);
-            } else if (timerContent[1] === 0 && timerContent[0] >= 1) {
-                timerContent[0] -= 1;
-                timerContent[1] = 59;
-            } else {
-                timerContent[1] -= 1;
-            }
-            timerScreen.innerHTML = timerContent.map(part => part.toString().padStart(2, '0')).join(':');
-
-        }, 1000);
-    }
+function countdown(){
+    let timerContent = timerScreen.innerHTML.split(':').map(content => Number(content));
+    let timerSeconds = timerContent[0] * 60 + timerContent[1];
+    countInterval = setInterval(() => {
+        if (timerContent[0] === 0 && timerContent[1] === 0) {
+            clearInterval(countdownInterval);
+        } else if (timerContent[1] === 0 && timerContent[0] >= 1) {
+            timerContent[0] -= 1;
+            timerContent[1] = 59;
+        } else {
+            timerContent[1] -= 1;
+        }
+        timerScreen.innerHTML = timerContent.map(part => part.toString().padStart(2, '0')).join(':');
+    }, 1000);
+}
 
 addMinute.addEventListener('click', () => timeChange(1));
 deduceMinute.addEventListener('click', () => timeChange(-1));
 resetButton.addEventListener('click', () => timerScreen.innerHTML = "25:00");
-startButton.addEventListener('click', () => countdown())
+startButton.addEventListener('click', () => countdown());
+pauseButton.addEventListener('click', () => clearInterval(countInterval));
