@@ -129,3 +129,8 @@ body {
 .buttonMinus:hover {
     background-color: rgba(35, 35, 35, 0.826);
 }
+
+.buttonOne, .buttonTwo, .buttonMinus, .buttonPlus, .reset {
+    cursor: pointer;
+    user-select: none;
+}
