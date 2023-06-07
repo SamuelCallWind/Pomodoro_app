@@ -1,5 +1,5 @@
 body {
-    display: flex;
+    display: inline-block;
 }
 
 .box {
@@ -9,6 +9,7 @@ body {
     transform: translate(-50%, -50%);
     height: 40vh;
     width: 1fr;
+    min-width: 60vw;
     background-color: rgba(4, 27, 95, 0.803);
     border: solid black 2px;
     border-radius: 10px;
@@ -22,9 +23,9 @@ body {
 }
 
 .buttonOne, .buttonTwo {
-    height: 6vw;
-    width: 30vw;
-    max-width: 200px;
+    height: 6vh;
+    width: 20vw;
+    max-width: 400px;
     max-height: 60px;
     background-color: rgba(240, 248, 255, 0.557);
     border: solid 2px black;
@@ -38,7 +39,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    transition: background-color 0.3s ease-in-out; 
+    transition: background-color 0.3s ease-in-out;
 }
 
 .smallerText {
@@ -78,7 +79,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: auto;
     width: 80%;
     min-width: 75px;
     min-height: 25px;
