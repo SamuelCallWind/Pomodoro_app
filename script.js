@@ -22,6 +22,7 @@ function countdown(){
     let timerSeconds = timerContent[0] * 60 + timerContent[1];
     countInterval = setInterval(() => {
         if (timerContent[0] === 0 && timerContent[1] === 0) {
+            document.getElementById('alert').play();
             clearInterval(countdownInterval);
         } else if (timerContent[1] === 0 && timerContent[0] >= 1) {
             timerContent[0] -= 1;
@@ -36,6 +37,7 @@ function countdown(){
 addMinute.addEventListener('click', () => timeChange(1));
 deduceMinute.addEventListener('click', () => timeChange(-1));
 resetButton.addEventListener('click', () => {
+    document.getElementById('alert').play();
     clearInterval(countInterval);
     timerScreen.innerHTML = "25:00"});
 startButton.addEventListener('click', () => countdown());
