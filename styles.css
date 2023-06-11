@@ -134,3 +134,16 @@ body {
     cursor: pointer;
     user-select: none;
 }
+
+.buttonPlusSeconds, .buttonMinusSeconds {
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    border: solid rgba(15, 14, 14, 0.665) 2px;
+    border-radius: 2px;
+    height: 8vh;
+    width: 8vw;
+    transition: background-color 0.1s ease-in-out;
+}
